@@ -1,4 +1,10 @@
-<?php wp_head(); ?>
+<?php 
+
+/**
+ * Template Name: Home
+ */
+
+wp_head(); ?>
 <body class="archive  woocommerce">
 
 <?php get_header(); ?>
