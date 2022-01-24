@@ -1,4 +1,4 @@
-<?php if ( true == get_theme_mod( 'banner_diplay_setting', 'on' ) ) : ?>
+<?php if ( true == get_theme_mod( 'offer_display_setting', 'on' ) ) : ?>
 <!--offer section start-->
 	<section class="space-3 space-adjust">
 		<div class="container ">

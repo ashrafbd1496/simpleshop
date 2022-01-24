@@ -1,11 +1,11 @@
-<?php if ( true == get_theme_mod( 'banner_diplay_setting', 'on' ) ) : ?>
+<?php if ( true == get_theme_mod( 'flickr_display_setting', 'on' ) ) : ?>
 	<!--flickr section start-->
 	<section class="">
 		<div class="container">
 			<div class="row justify-content-md-center">
 				<div class="col-md-8">
 					<div class="section-title text-center">
-						<h2 class="title ">SimpleShop on Flickr</h2>
+						<h2 class="title "><?php echo get_theme_mod('flickr_title') ?></h2>
 					</div>
 				</div>
 			</div>

@@ -31,7 +31,6 @@ if(class_exists('Kirki')){
 			'type'    => 'switch',
 			'settings'    => 'banner_display_setting',
 			'label'       => esc_html__( 'Display Banner Secton', 'simpleshop' ),
-			'description' => esc_html__( 'Display Banner control', 'simpleshop' ),
 			'section'     => 'simpleshop_homepage',
 			'default'     => 'on',
 			'choices'     => [
@@ -49,6 +48,13 @@ if(class_exists('Kirki')){
 		'section'  => 'simpleshop_homepage',
 		'default'  => esc_html__( 'সততা। সহজতা। বিশ্বস্ততা।', 'simpleshop' ),
 		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'banner_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
 	] );
 
 	//Banner Section Link
@@ -59,6 +65,14 @@ if(class_exists('Kirki')){
 		'section'  => 'simpleshop_homepage',
 		'default'  => esc_html__( 'https://simpleshop.ashrafbd.com', 'simpleshop' ),
 		'priority' => 10,
+		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'banner_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
 	] );
 
 	//Banner Section Link Text
@@ -69,6 +83,14 @@ if(class_exists('Kirki')){
 		'section'  => 'simpleshop_homepage',
 		'default'  => esc_html__( 'বই কিনুন', 'simpleshop' ),
 		'priority' => 10,
+		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'banner_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
 	] );
 
 	//Product Category Section Show Hide
@@ -94,6 +116,13 @@ if(class_exists('Kirki')){
 		'section'  => 'simpleshop_homepage',
 		'default'  => esc_html__( 'Shop By Category', 'simpleshop' ),
 		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'pcat_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
 	] );
 
 	//Products Section Show Hide
@@ -119,6 +148,13 @@ if(class_exists('Kirki')){
 		'section'  => 'simpleshop_homepage',
 		'default'  => esc_html__( 'New Arrival', 'simpleshop' ),
 		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'product_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
 	] );
 
 	//Product  Section Sub Ttile
@@ -129,7 +165,163 @@ if(class_exists('Kirki')){
 		'section'  => 'simpleshop_homepage',
 		'default'  => esc_html__( '37 New fashion products arrived recently in our showroom for this winter', 'simpleshop' ),
 		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'product_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
 	] );
+
+
+	//Promo Section Show Hide
+		Kirki::add_field(SIMPLESHOP_CUSTOMIZER_CONFIG_ID,
+		[
+			'type'    => 'switch',
+			'settings'    => 'promo_display_setting',
+			'label'       => esc_html__( 'Display Promo Secton', 'simpleshop' ),
+			'section'     => 'simpleshop_homepage',
+			'default'     => 'on',
+			'choices'     => [
+				'on'  => esc_html__( 'Enable', 'simpleshop' ),
+				'off' => esc_html__( 'Disable', 'simpleshop' ),
+			],
+		]
+	);
+
+	//Promo  sectoion Ttile
+	Kirki::add_field( SIMPLESHOP_CUSTOMIZER_CONFIG_ID, [
+		'type'     => 'text',
+		'settings' => 'promo_title_setting',
+		'label'    => esc_html__( 'Promo Section Title', 'simpleshop' ),
+		'section'  => 'simpleshop_homepage',
+		'default'  => esc_html__( 'Up to 50% off', 'simpleshop' ),
+		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'promo_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
+	] );
+
+	//Promo  Section Sub Ttile
+	Kirki::add_field( SIMPLESHOP_CUSTOMIZER_CONFIG_ID, [
+		'type'     => 'link',
+		'settings' => 'promo_button_link_setting',
+		'label'    => esc_html__( 'Promo Button Link', 'simpleshop' ),
+		'section'  => 'simpleshop_homepage',
+		'default'  => esc_html__( 'https://simplesop.ashrafbd.com', 'simpleshop' ),
+		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'promo_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
+	] );
+	//Promo  button link text
+	Kirki::add_field( SIMPLESHOP_CUSTOMIZER_CONFIG_ID, [
+		'type'     => 'text',
+		'settings' => 'promo_link_text_setting',
+		'label'    => esc_html__( 'Promo Button Link Text', 'simpleshop' ),
+		'section'  => 'simpleshop_homepage',
+		'default'  => esc_html__( 'in store and online', 'simpleshop' ),
+		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'promo_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
+	] );
+
+
+	//Popular Products Section Show Hide
+		Kirki::add_field(SIMPLESHOP_CUSTOMIZER_CONFIG_ID,
+		[
+			'type'    => 'switch',
+			'settings'    => 'pproduct_display_setting',
+			'label'       => esc_html__( 'Display Popular Product Secton', 'simpleshop' ),
+			'section'     => 'simpleshop_homepage',
+			'default'     => 'on',
+			'choices'     => [
+				'on'  => esc_html__( 'Enable', 'simpleshop' ),
+				'off' => esc_html__( 'Disable', 'simpleshop' ),
+			],
+		]
+	);
+
+	//Popular Products  sectoion Ttile
+	Kirki::add_field( SIMPLESHOP_CUSTOMIZER_CONFIG_ID, [
+		'type'     => 'text',
+		'settings' => 'pproduct_title_setting',
+		'label'    => esc_html__( 'Popular Product Section Title', 'simpleshop' ),
+		'section'  => 'simpleshop_homepage',
+		'default'  => esc_html__( 'Up to 50% off', 'simpleshop' ),
+		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'pproduct_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
+	] );
+
+	//Offer Section Show Hide
+		Kirki::add_field(SIMPLESHOP_CUSTOMIZER_CONFIG_ID,
+		[
+			'type'    => 'switch',
+			'settings'    => 'offer_display_setting',
+			'label'       => esc_html__( 'Display Offer Secton', 'simpleshop' ),
+			'section'     => 'simpleshop_homepage',
+			'default'     => 'on',
+			'choices'     => [
+				'on'  => esc_html__( 'Enable', 'simpleshop' ),
+				'off' => esc_html__( 'Disable', 'simpleshop' ),
+			],
+		]
+	);
+
+	//Flickr Section Show Hide
+	Kirki::add_field(SIMPLESHOP_CUSTOMIZER_CONFIG_ID,
+	[
+		'type'    => 'switch',
+		'settings'    => 'flickr_display_setting',
+		'label'       => esc_html__( 'Display Flickr Secton', 'simpleshop' ),
+		'section'     => 'simpleshop_homepage',
+		'default'     => 'on',
+		'choices'     => [
+			'on'  => esc_html__( 'Enable', 'simpleshop' ),
+			'off' => esc_html__( 'Disable', 'simpleshop' ),
+		],
+	]
+);
+	//Flickr Section Title
+	Kirki::add_field(SIMPLESHOP_CUSTOMIZER_CONFIG_ID,
+	[
+		'type'    => 'text',
+		'settings'    => 'flickr_title',
+		'label'       => esc_html__( 'Flickr Secton Title', 'simpleshop' ),
+		'section'     => 'simpleshop_homepage',
+		'default'  => esc_html__( 'SimpleShop on Flickr', 'simpleshop' ),
+		'priority' => 10,
+		'active_callback'=>[
+			[
+				'setting'=>'flickr_display_setting',
+				'operator'=>'==',
+				'value'=>true,
+			]
+		],
+	]
+);
+
+
 
 
 

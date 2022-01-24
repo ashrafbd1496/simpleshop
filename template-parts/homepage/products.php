@@ -1,13 +1,11 @@
-<?php if ( true == get_theme_mod( 'banner_diplay_setting', 'on' ) ) : ?>
+<?php if ( true == get_theme_mod( 'product_display_setting', 'on' ) ) : ?>
 	<!--product section start-->
 	<section class="space-3 space-adjust">
 		<div class="container">
 			<div class="row justify-content-md-center">
 				<div class="col-md-8">
 					<div class="section-title text-center">
-						<h2 class="title ">New Arrival</h2>
-						<div class="sub-title">37 New fashion products arrived recently in our showroom for this
-							winter
+						<h2 class="title "><?php echo get_theme_mod('products_title_setting'); ?></h2><?php echo get_theme_mod('products_subtitle_setting'); ?>
 						</div>
 					</div>
 				</div>

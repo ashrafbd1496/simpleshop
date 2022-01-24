@@ -1,4 +1,4 @@
-<?php if ( true == get_theme_mod( 'banner_diplay_setting', 'on' ) ) : ?>
+<?php if ( true == get_theme_mod( 'promo_display_setting', 'on' ) ) : ?>
 	<!--promo section start-->
 	<section>
 		<div class="container">
@@ -14,9 +14,9 @@
 									<h2 class="text-white mb-0 promo-title">
 										Sale
 									</h2>
-									<h3 class="text-white promo-sub-title mt-0">Up to 50% off</h3>
+									<h3 class="text-white promo-sub-title mt-0"><?php echo get_theme_mod('promo_title_setting'); ?></h3>
 
-									<a href="#" class="promo-link">in store and online</a>
+									<a href="<?php echo get_theme_mod('promo_button_link_setting'); ?>" class="promo-link"><?php echo get_theme_mod('promo_link_text_setting'); ?></a>
 								</div>
 							</div>
 						</div>
