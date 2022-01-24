@@ -6,7 +6,7 @@
 				<nav class="navbar navbar-expand-lg mainmenu">
 					<!--logo-->
 					<a class="navbar-brand mr-5 text-dark float-left" href="index.html">
-						<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/logo@2x.png 2x" alt=""/>
+						<img class="" src="<?php echo get_template_directory_uri(); ?>/assets/img/risalahshop-logo250.png" srcset="<?php echo get_template_directory_uri(); ?>/assets/img/risalahshop-logo250.png 2x" alt=""/>
 					</a>
 					<!--logo-->
 

@@ -1,3 +1,4 @@
+<?php if ( true == get_theme_mod( 'banner_diplay_setting', 'on' ) ) : ?>
 	<!--promo section start-->
 	<section>
 		<div class="container">
@@ -5,7 +6,7 @@
 				<div class="col-md-12">
 					<div class="promo-box space-3">
 						<div class="promo-img rounded bg-overlay" data-overlay="1"
-						     style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/sb.jpg);"></div>
+						     style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/img/kalama-dorshon.jpg);"></div>
 						<div class="container">
 							<div class="row justify-content-center align-items-center text-center">
 								<div class="col-md-8">
@@ -26,3 +27,4 @@
 		</div>
 	</section>
 	<!--promo section end-->
+	<?php endif; ?>

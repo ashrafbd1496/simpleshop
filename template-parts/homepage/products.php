@@ -1,3 +1,4 @@
+<?php if ( true == get_theme_mod( 'banner_diplay_setting', 'on' ) ) : ?>
 	<!--product section start-->
 	<section class="space-3 space-adjust">
 		<div class="container">
@@ -19,7 +20,7 @@
 						<li class="product type-product post-17 status-publish instock product_cat-accessories has-post-thumbnail sale featured shipping-taxable purchasable product-type-simple">
 							<div class="product-wrap">
 								<a href="#" class="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/p1.jpg" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/riviver-heart.jpg" alt="">
 								</a>
 								<a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
 									<i class="fa fa-shopping-basket"></i>
@@ -51,7 +52,7 @@
 						<li class="product">
 							<div class="product-wrap">
 								<a href="#" class="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/p2.jpg" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/krused1.png" alt="">
 								</a>
 								<a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
 									<i class="fa fa-shopping-basket"></i>
@@ -72,7 +73,7 @@
 						<li class="product last">
 							<div class="product-wrap">
 								<a href="#" class="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/p3.jpg" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/soytaner-biruddhe-lorai.jpg" alt="">
 								</a>
 								<a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
 									<i class="fa fa-shopping-basket"></i>
@@ -240,3 +241,4 @@
 		</div>
 	</section>
 	<!-- product section end-->
+	<?php endif; ?>

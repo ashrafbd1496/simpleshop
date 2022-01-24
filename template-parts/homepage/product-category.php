@@ -1,3 +1,4 @@
+<?php if ( true == get_theme_mod( 'banner_diplay_setting', 'on' ) ) : ?>
 <!--shop category start-->
 	<section class="space-3">
 		<div class="container sm-center">
@@ -15,3 +16,4 @@
 		</div>
 	</section>
 	<!--shop category end-->
+	<?php endif; ?>

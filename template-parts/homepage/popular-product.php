@@ -1,4 +1,4 @@
-
+<?php if ( true == get_theme_mod( 'banner_diplay_setting', 'on' ) ) : ?>
 	<!--product section start-->
 	<section class="space-3">
 		<div class="container">
@@ -59,7 +59,7 @@
 						<li class="product last">
 							<div class="product-wrap">
 								<a href="#" class="">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/p12.jpg" alt="">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/img/kalama-dorshon.jpg" alt="">
 								</a>
 								<a href="#" class="button product_type_simple add_to_cart_button ajax_add_to_cart">
 									<i class="fa fa-shopping-basket"></i>
@@ -84,3 +84,4 @@
 		</div>
 	</section>
 	<!-- product section end-->
+	<?php endif; ?>
