@@ -1,1 +1,3 @@
-# Simple Shop WordPress Ecommerce Theme Developed by me
+# Simple Shop WordPress Ecommerce Theme
+## [Live Demo](#)
+![Simpleshop Theme](screenshot.png "simpleShop theme")
